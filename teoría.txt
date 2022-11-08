@@ -1,0 +1,7 @@
+db.json
+Archivo que simula un servidor. Debemos tener instalado node.js y un paquete que va a simular el comportamiento de nuestra computadora como un servidor: json server. 
+Ejecutar en la terminal 
+json-server
+Para ver las distintas opciones de comandos disponibles
+Para hacer seguimiento a un archivo ejecutar en la consola
+json-server -w nombreArchivo.extensión
