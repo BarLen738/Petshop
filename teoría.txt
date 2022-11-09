@@ -14,3 +14,51 @@ C - método HTTP -> POST
 R - método HTTP -> GET
 U - método HTTP -> PUT/PATCH
 D - método HTTP -> DELETE
+
+A partir de una información que se ingresa, se generan peticiones al servidor y el servidor genera otra respuesta.
+Si se siguen anidando funciones dentro de funciones, se llega a un punto imposible (callback hell),, ya que se espera que se cargue una función para seguir llamando a las siguientes.
+
+Para esto se inventaron las PROMISES (objeto), se usan para comunicaciones asíncronas. Para ejecutar funciones consecutivas, sin esperar a obtener los resultados para poder ejecutar otra.
+new promise (función, resolver, rechazar)
+Estados:
+-Pendiente, estado inicial
+-Cumplida, llama al resolver
+-Rechazada, llama a rechazar
+https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/Promise#par%C3%A1metros
+
+Ej de callback hell
+
+movePersonaje(‘100’, ‘Izquierda’, function() {
+    movePersonaje(‘800’, ‘Derecha’, function() {
+        movePersonaje(‘200’, ‘Izquierda’, function() {
+            movePersonaje(‘10’, ‘Derecha’, function() {
+                movePersonaje(‘60’, ‘Izquierda’, function() {
+                })
+
+            })
+
+        })
+    })
+})
+
+Solución con PROMISE
+
+movePersonaje(‘100’, ‘Izquierda’)
+    .then(() => movePersonaje(‘800’, ‘Derecha’))
+    .then(() => movePersonaje(‘200’, ‘Izquierda’))
+    .then(() => movePersonaje(‘10’, ‘Derecha’ ))
+    .then(() => movePersonaje(‘60’, ‘Izquierda’ ))
+
+Ese escenario donde hacemos varias requisiciones que son dependientes una de la otra es muy común, y en ese escenario podemos hacer el uso del método .all de la Promise. Pasando cada una de las funciones dentro de un arreglo como argumento de la Promise.all podemos ejecutar todas sus funciones en orden sin la necesidad de encadenar varios .then().
+
+Promise.all([
+    moverPersonaje(‘100’, ‘Izquierda’),
+    moverPersonaje(‘800’, ‘Derecha’),
+    moverPersonaje(‘200’, ‘Izquierda’),
+    moverPersonaje(10, ‘Izquierda’),
+    moverPersonaje(‘60’, ‘Izquierda’)
+])
+.then(...)
+
+El Promise.all ejecutará todas las llamadas en el orden y regresará una respuesta que podrá ser utilizada en el .then.
+
