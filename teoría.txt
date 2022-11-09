@@ -62,3 +62,22 @@ Promise.all([
 
 El Promise.all ejecutará todas las llamadas en el orden y regresará una respuesta que podrá ser utilizada en el .then.
 
+FETCH API
+Manera más efectiva de trabajar con promesas (ahorrar código). 
+Es una función que viene nativa en el navegador y que se puede reutilizar.
+https://www.aluracursos.com/blog/empezando-con-fetch-en-javascript?utm_source=gnarus&utm_medium=timeline
+
+AMBIENTE JS
+Interacción en tiempo real, muchas funcionalidades. Evolución de JS, empresas y programadores que añaden funcionalidades. 
+Hoy se tiene un ambiente de JS en el que existen: pila de ejecución que ejecuta el código JS. Pila de memoria que almacena el nombre de variables, funciones, objetos. Motor JS, que toma el código que nosotros escribimos y lo transforma en código que la máquina pueda interpretar. JS combina funcionalidades de la web API (nuevas funciones que se agregan al navegador: por ejemplo, fetch API -comunicación con el servidor-, almacenamiento -localStorage y sessionStorage-, audio). 
+Lo primero que se va a ejecutar al iniciar un programa es el código puro de JS, nativo. Hace un event loop -verifica qué parte del código pertenece a JS nativo y cuál pertenece a la fila de fc de web API y a la fila de promesas-. Event loop lee el código JS de arriba hacia abajo y toma porciones de código, sólo ejecuta código JS y manda a fila de promesas código para web API y para promesas. Luego empieza a tomar los archivos que pertenecen a las otras filas y las pone en pila de ejecución y los va ejecutando. 
+http://latentflip.com/loupe/?code=JC5vbignYnV0dG9uJywgJ2NsaWNrJywgZnVuY3Rpb24gb25DbGljaygpIHsKICAgIHNldFRpbWVvdXQoZnVuY3Rpb24gdGltZXIoKSB7CiAgICAgICAgY29uc29sZS5sb2coJ1lvdSBjbGlja2VkIHRoZSBidXR0b24hJyk7ICAgIAogICAgfSwgMjAwMCk7Cn0pOwoKY29uc29sZS5sb2coIkhpISIpOwoKc2V0VGltZW91dChmdW5jdGlvbiB0aW1lb3V0KCkgewogICAgY29uc29sZS5sb2coIkNsaWNrIHRoZSBidXR0b24hIik7Cn0sIDUwMDApOwoKY29uc29sZS5sb2coIldlbGNvbWUgdG8gbG91cGUuIik7!!!PGJ1dHRvbj5DbGljayBtZSE8L2J1dHRvbj4%3D
+
+Ej de ORDEN DE EJECUCIÓN
+
+console.log('1');
+setTimeout(() => console.log('2'), 1000);
+console.log('3')
+
+El código de arriba regresa 1, 3, 2
+setTimeOut() es una instrucción de WebApi, por eso es mandado para la callback queue y es ejecutado después de los dos console.log, que son ejecutados primero ya que son comandos nativos de lenguaje.
