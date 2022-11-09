@@ -5,3 +5,12 @@ json-server
 Para ver las distintas opciones de comandos disponibles
 Para hacer seguimiento a un archivo ejecutar en la consola
 json-server -w nombreArchivo.extensión
+
+AJAX - Async JS and XML
+Crear un archivo JS para poder instanciar una nueva clase XML. Para comunicarnos y conectarnos con nuestra API.
+
+CRUD - Create, Read, Update, Delete
+C - método HTTP -> POST 
+R - método HTTP -> GET
+U - método HTTP -> PUT/PATCH
+D - método HTTP -> DELETE
