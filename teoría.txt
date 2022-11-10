@@ -15,6 +15,8 @@ R - método HTTP -> GET
 U - método HTTP -> PUT/PATCH
 D - método HTTP -> DELETE
 
+Diferencias entre métodos GET y POSThttps://www.aluracursos.com/blog/diferencias-entre-get-y-post
+
 A partir de una información que se ingresa, se generan peticiones al servidor y el servidor genera otra respuesta.
 Si se siguen anidando funciones dentro de funciones, se llega a un punto imposible (callback hell),, ya que se espera que se cargue una función para seguir llamando a las siguientes.
 
