@@ -17,6 +17,12 @@ D - método HTTP -> DELETE
 
 Diferencias entre métodos GET y POSThttps://www.aluracursos.com/blog/diferencias-entre-get-y-post
 
+Editando - PUT
+Creamos un nuevo objeto URL que será capaz de decirnos cuál dirección de la página estamos. Por medio de la propiedad searchParams podemos acceder al método get y seleccionar el id que vemos en la url.
+
+const agarrarURL = new URL( window.location )
+const id = agarrarURL.searchParams.get(‘id’)
+
 A partir de una información que se ingresa, se generan peticiones al servidor y el servidor genera otra respuesta.
 Si se siguen anidando funciones dentro de funciones, se llega a un punto imposible (callback hell),, ya que se espera que se cargue una función para seguir llamando a las siguientes.
 

@@ -1,4 +1,4 @@
-import { clientServices } from "../../service/client-service.js";
+import { clientServices } from "../service/client-service.js";
 
 const formulario = document.querySelector('[data-form]');
 
@@ -11,7 +11,7 @@ formulario.addEventListener('submit', (evento) => {
     clientServices
     .crearCliente(nombre, email)
     .then(() => {
-        window.location.href = "/screens/registro_completado.html";
+        window.location.href = "../screens/registro_completado.html";
     })
     .catch((err) => console.log(err));
 });

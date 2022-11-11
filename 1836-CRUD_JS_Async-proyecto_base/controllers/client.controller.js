@@ -1,4 +1,4 @@
-import { clientServices } from '../../service/client-service.js'
+import { clientServices } from '../service/client-service.js'
 
 
 //trabajar con toda la interacción entre el JS y el HTML
@@ -15,7 +15,7 @@ const crearNuevaLinea = (nombre, email, id) => {
       <ul class="table__button-control">
         <li>
           <a
-            href="../screens/editar_cliente.html"
+            href="../screens/editar_cliente.html?id=${id}"
             class="simple-button simple-button--edit"
             >Editar</a
           >
