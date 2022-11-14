@@ -11,7 +11,7 @@ formulario.addEventListener('submit', (evento) => {
     clientServices
     .crearCliente(nombre, email)
     .then(() => {
-        window.location.href = "../screens/registro_completado.html";
+        window.location.href = '../screens/registro_completado.html';
     })
     .catch((err) => console.log(err));
 });
