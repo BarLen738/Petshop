@@ -89,3 +89,23 @@ console.log('3')
 
 El código de arriba regresa 1, 3, 2
 setTimeOut() es una instrucción de WebApi, por eso es mandado para la callback queue y es ejecutado después de los dos console.log, que son ejecutados primero ya que son comandos nativos de lenguaje.
+
+ASYNC // AWAIT
+Asíncrono. 
+async function 
+Await pausa la ejecución de la acción y espera la respuesta positiva de la promesa, una vez recibida, ejecuta la función async
+try catch
+Para manejar errores 
+Ejemplo
+const render = async () =>  {
+    try {
+        const listaClientes = await clienteService.listaClientes()
+        listaClientes.forEach(elemento => {
+            tabla.appendChild(creaNuevaLinea(elemento.nombre,elemento.correo, elemento.id))
+        })
+    }
+    catch(error){
+        console.log(error)
+        window.location.href="../telas/error.html"
+    }
+}
