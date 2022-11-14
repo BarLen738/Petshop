@@ -15,7 +15,7 @@
   ],
   "profile": [
     {
-      "nombre": "Bárbara",
+      "nombre": "Barbara",
       "email": "barbara@gmail.com",
       "id": 1
     },
@@ -38,6 +38,11 @@
       "nombre": "Juan",
       "email": "juan@gmail.com",
       "id": "64300825-9ad3-4510-9322-2c0738c25375"
+    },
+    {
+      "nombre": "Marcelo",
+      "email": "marcelo@gmail.com",
+      "id": "25c4a19b-9f97-49fd-a3f2-ef7c3ecb81c7"
     }
   ]
 }
