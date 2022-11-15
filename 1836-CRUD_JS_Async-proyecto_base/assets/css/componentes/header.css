@@ -20,3 +20,39 @@
 .header__link {
   margin-left: 2rem;
 }
+
+@media only screen and (max-width: 600px) {
+  .header {
+    border-radius: 0 0 5px 5px;
+    height: 3rem;
+  }
+
+  .header__logo {
+    width: 2rem;
+  }
+}
+
+@media only screen and (min-width: 601px) and (max-width: 800px) {
+
+}
+
+@media only screen and (min-width: 801px) and (max-width: 1100px) {
+  .header {
+    font-size: 1.2rem;
+  }
+
+  .header__logo {
+    width: 4rem;
+  }
+}
+
+@media (min-width: 1101px) {
+  .header {
+    font-size: 1.4rem;
+    padding: 1.3rem 2rem;
+  }
+
+  .header__logo {
+    width: 5.5rem;
+  }
+}

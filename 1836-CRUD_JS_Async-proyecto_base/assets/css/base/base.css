@@ -26,14 +26,31 @@ body {
   flex-direction: column;
 }
 
-@media (min-width: 800px) {
+@media only screen and (max-width: 600px) {
+  .container {
+    padding-right: 2.5rem;
+    padding-left: 2.5rem;
+    font-size: .55rem;
+  }
+}
+
+
+@media only screen and (min-width: 601px) and (max-width: 800px) {
+  .container {
+    padding-right: 2.5rem;
+    padding-left: 2.5rem;
+
+  }
+}
+
+@media only screen and (min-width: 801px) and (max-width: 1200px) {
   .container {
     padding-right: 2.5rem;
     padding-left: 2.5rem;
   }
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 1201px) {
   .container {
     padding-left: calc((100vw - 900px) / 2);
     padding-right: calc((100vw - 900px) / 2);

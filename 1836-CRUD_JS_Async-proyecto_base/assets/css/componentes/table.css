@@ -66,3 +66,83 @@
 .td {
   padding: 1rem;
 }
+
+@media only screen and (max-width: 600px) {
+  .table {
+    margin-top: 2rem;
+    border-radius: 5px;
+    font-size: .6rem;
+  }
+
+  .table td:first-of-type,
+  .table th:first-of-type {
+    padding-left: 1.4rem;
+  }
+
+  .table td:last-of-type,
+  .table th:last-of-type {
+    padding-right: 1.4rem;
+  }
+
+  .table thead {
+    font-size: .6rem;
+  }
+
+  .table th {
+    padding-top: 1.4rem;
+    padding-bottom: 1.4rem;
+  }
+
+  .table td {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+
+  .table tr:last-of-type td {
+    padding-bottom: 1.4rem;
+  }
+
+}
+
+@media only screen and (min-width: 601px) and (max-width: 800px) {
+  .table {
+    font-size: .9rem;
+  }
+
+  .table__column--p {
+    width: 20%;
+    font-size: 1rem;
+  }
+  
+  .table__column--m {
+    width: 25%;
+    font-size: 1rem;
+  }
+  
+  .table__column--g {
+    width: 50%;
+    font-size: 1rem;
+  }
+}
+
+@media only screen and (min-width: 801px) and (max-width: 1100px) {
+  .table {
+    font-size: 1.1rem;
+  }
+
+  .table thead {
+    font-size: 1.2rem;
+  }
+
+}
+
+@media (min-width: 1101px) {
+  .table {
+    font-size: 1.4rem;
+  }
+
+  .table thead {
+    font-size: 1.6rem;
+  }
+
+}
