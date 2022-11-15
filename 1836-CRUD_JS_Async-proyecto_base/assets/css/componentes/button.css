@@ -33,7 +33,7 @@
 @media only screen and (max-width: 600px) {
   .button {
     font-size: .8rem;
-    width: 80%;
+    width: 50%;
     padding: 1rem 0;
   }
 }
@@ -42,6 +42,7 @@
   .button {
     font-size: 1.2rem;
     padding: 1rem 0;
+    width: 50%;
   }
 }
 
@@ -49,9 +50,10 @@
   .button {
     font-size: 1rem;
     padding: 1rem 0;
+    width: 50%;
   }
 }
 
 @media (min-width: 1101px) {
-
+  
 }

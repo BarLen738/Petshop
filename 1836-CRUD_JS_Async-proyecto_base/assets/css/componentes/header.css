@@ -25,6 +25,7 @@
   .header {
     border-radius: 0 0 5px 5px;
     height: 3rem;
+    font-size: .6rem;
   }
 
   .header__logo {
